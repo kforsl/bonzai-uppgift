@@ -51,9 +51,6 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
-
-
-
 .header__burger-btn,
 .header__burger-btn::before,
 .header__burger-btn::after {
@@ -82,7 +79,7 @@ input[type="checkbox"] {
 }
 
 #burgerToggle:checked+.header__burger-menu .header__burger-btn {
-    background: rgba(84, 234, 189, 0);
+    background-color: rgba(84, 234, 189, 0);
 }
 
 #burgerToggle:checked+.header__burger-menu .header__burger-btn::after {
@@ -121,4 +118,40 @@ input[type="checkbox"] {
 
 .header__desktop-menu {
     display: none;
+}
+
+/* Hero Section Styling */
+
+.hero {
+    height: 75vh;
+
+    background-image: url(..//assets/image/03-night.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .4);
+}
+
+.hero__text-container {
+    backdrop-filter: blur(2px);
+    width: 80%;
+}
+
+.hero__title {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+    color: #54eabdff;
+    text-align: center;
+}
+
+.hero__sub-title {
+    margin-bottom: 1rem;
+    color: #54eabdff;
+    text-align: center;
+    margin-bottom: 2rem;
 }
