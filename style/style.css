@@ -4,9 +4,14 @@
     padding: 0;
 }
 
+:root {
+    --primary-color: #54eabdff;
+}
+
 .wrapper {
     max-width: 1000px;
     margin: 0 auto;
+    
 }
 
 
@@ -14,7 +19,7 @@
 
 header {
     padding:.5rem;
-    height: 3rem;
+    min-height: 3rem;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -46,8 +51,8 @@ input[type="checkbox"] {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    width: 2rem;
+    height: 32px;
+    width: 36px;
     cursor: pointer;
 }
 
@@ -55,12 +60,12 @@ input[type="checkbox"] {
 .header__burger-btn::before,
 .header__burger-btn::after {
     display: block;
-    position: absolute;
+    position: fixed;
     height: 4px;
     border-radius: 2px;
     width: 2rem;
-    background-color: #54eabdff;
-    transition: all .3s ease-in-out;
+    background-color: var(--primary-color);
+    transition: all .5s ease-in-out;
 }
 
 .header__burger-btn::before {
@@ -100,20 +105,26 @@ input[type="checkbox"] {
     padding: .5rem 1rem;
     background-color: white;
     box-shadow: -2px 2px .5rem rgba(0, 0, 0, .2);
-
+    transition: all .4s ease-in-out;
 }
 
 .header__menu_list {
-    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .header__list-item {
-    padding: 1rem;
+    list-style: none;
+    padding:1rem;
 }
 
 .header__menu-link {
     text-decoration: none;
     color: black;
+    height: 100%;
+    width: 100%;
+    padding:1rem;
 }
 
 .header__desktop-menu {
@@ -145,13 +156,121 @@ input[type="checkbox"] {
 .hero__title {
     font-size: 2rem;
     margin-bottom: .5rem;
-    color: #54eabdff;
+    color: var(--primary-color);
     text-align: center;
 }
 
 .hero__sub-title {
-    margin-bottom: 1rem;
-    color: #54eabdff;
+    font-size: 1.2rem;
+    color: var(--primary-color);
     text-align: center;
     margin-bottom: 2rem;
+}
+
+/* main section styling */
+
+.main {
+    height: 120vh;
+}
+
+
+/* footer section styling */
+.footer__mobile {
+    
+}
+
+.footer__desktop {
+    display: none;
+}
+
+.footer__content-container {
+    padding: 1rem;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, .4);
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.footer__menu-link {
+    margin: 0 auto;
+    text-decoration: none;
+    color: black;
+}
+
+.footer__menu-link::before {
+    text-align: center;
+    display: block;
+}
+
+.footer__logo {
+    background-image: url(../assets/logo/bonz.ai-logo-color-portrait-full.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 2rem;
+}
+
+.footer__title {
+    margin: 1rem 0;
+}
+
+.footer__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__list-item {
+    list-style: none;
+    margin: .5rem 0;
+    list-style: none;
+}
+
+
+
+@media screen and (min-width: 700px){
+    
+    /* header */ 
+
+
+    .header__mobile-menu {
+        display: none;
+    }
+
+    .header__desktop-menu {
+        display: block;
+    }
+
+    .header__menu-container {
+        position: static;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        background-color: transparent;
+    }
+
+    .header__menu_list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0 0;
+    }
+
+    .header__menu-link {
+        text-decoration: none;
+        color: black;
+        height: 100%;
+        width: 100%;
+        padding:1rem 2rem;
+    }
+
+    /* footer */ 
+
+    .footer__mobile {
+        display: none;
+    }
+
+    .footer__desktop {
+        display: block;
+    }
+
+    .footer__content-container {
+        grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+    }
 }
