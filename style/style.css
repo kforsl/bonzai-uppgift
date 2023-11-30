@@ -11,16 +11,19 @@
 .wrapper {
     max-width: 1000px;
     margin: 0 auto;
-    
+
 }
 
 
 /* Header Section Styling */
 
 header {
-    padding:.5rem;
+    padding: .5rem;
     min-height: 3rem;
     width: 100%;
+    max-width: 1000px;
+    top: 0;
+    position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -92,7 +95,7 @@ input[type="checkbox"] {
     transform: rotate(-45deg);
 }
 
-#burgerToggle:checked ~ .header__menu-container {
+#burgerToggle:checked~.header__menu-container {
     right: 0;
 }
 
@@ -116,15 +119,22 @@ input[type="checkbox"] {
 
 .header__list-item {
     list-style: none;
-    padding:1rem;
+    padding: 1rem 0;
 }
 
 .header__menu-link {
     text-decoration: none;
-    color: black;
     height: 100%;
     width: 100%;
-    padding:1rem;
+    padding: 1rem;
+}
+
+.header__menu-link--light {
+    color: white;
+}
+
+.header__menu-link--active {
+    color: var(--primary-color);
 }
 
 .header__desktop-menu {
@@ -139,10 +149,14 @@ input[type="checkbox"] {
 }
 
 .footer__content-container {
-    padding: 1rem;
+    padding: 1rem 0;
     box-shadow: 0 0 .5rem rgba(0, 0, 0, .4);
     display: grid;
     grid-template-columns: 1fr;
+}
+
+.footer__text-content {
+    padding: 0 4rem;
 }
 
 .footer__menu-link {
@@ -179,19 +193,12 @@ input[type="checkbox"] {
     list-style: none;
 }
 
-
-
-
-
-
-
-
-/* index html styling */ 
+/* index html styling */
 
 /* Hero Section Styling */
 
 .hero {
-    height: 75vh;
+    height: 90vh;
 
     background-image: url(..//assets/image/03-night.jpg);
     background-position: center;
@@ -239,31 +246,192 @@ main {
 /* booking html styling */
 
 .booking {
-    margin: 3rem auto;
+    margin: 8rem auto;
 }
 
 .booking__form {
     margin: 0 auto;
-    width: 80%;
-    padding: 2rem; 
-    border: 2px solid black;
+    width: 90%;
+    padding: 2rem;
     border-radius: 8px;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .4);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+}
+
+.booking__form-title {
+    grid-column: auto / span 2;
+    padding: .5rem 0;
+}
+
+.booking__form-sub-title {
+    grid-column: auto / span 2;
+    padding: .5rem 0;
+}
+
+.booking__form-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: .5rem;
+}
+
+.booking__form-container--left {
+    padding-left: 0;
+}
+
+.booking__form-container--right {
+    padding-right: 0;
 }
 
 .booking__room-card {
     width: 80%;
-    margin: 20px auto;
-    padding: 1rem; 
-    border: solid 2px black;
+    margin: 3rem auto;
+    padding: 1rem;
     border-radius: 8px;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .4);
+   display: grid;
+   grid-template-rows: repeat(2, 1fr);
+}
+
+.booking__text-container {
+    display: grid;
+    padding-top: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1rem;
+    grid-template-areas: 
+    "title price"
+    "text text"
+    "text text"
+    "btnOne btnTwo";
+}
+
+.booking__room-title {
+    grid-area: title;
+    text-align: start;
+}
+
+.booking__room-description {
+    grid-area: text;
+    padding: 1rem 0;
+}
+
+.booking__room-price {
+    grid-area: price;
+    text-align: end;
+}
+
+.booking__room-card-btn {
+    border: none;
+    background-color: var(--primary-color);
+    color: black;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    padding: 1rem;
+    margin: .5rem;
+    border-radius: 8px;
+}
+
+.booking__room-card-btn:hover {
+    color: var(--primary-color);
+    background-color: black;
+}
+
+.booking__room-card-btn:nth-of-type(1) {
+    grid-area: btnOne;
+}
+
+.booking__room-card-btn:nth-of-type(2) {
+    grid-area: btnTwo;
+}
+
+
+.booking__room-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.booking__room-image--day-one {
+    background-image: url(../assets/image/01-day.jpg);
+}
+
+.booking__room-image--day-two {
+    background-image: url(../assets/image/02-day.jpg);
+}
+
+.booking__room-image--day-three {
+    background-image: url(../assets/image/03-day.jpg);
+}
+
+.booking__room-image--day-four {
+    background-image: url(../assets/image/04-day.jpg);
+}
+
+.booking__room-image--day-five {
+    background-image: url(../assets/image/05-day.jpg);
+}
+
+.booking__room-image--day-six {
+    background-image: url(../assets/image/06-day.jpg);
+}
+
+.booking__room-image--day-seven {
+    background-image: url(../assets/image/07-day.jpg);
+}
+
+.booking__room-image--day-eight {
+    background-image: url(../assets/image/08-day.jpg);
+}
+
+.booking__room-image--day-nine {
+    background-image: url(../assets/image/09-day.jpg);
+}
+
+.booking__room-image--night-one {
+    background-image: url(../assets/image/01-night.jpg);
+}
+
+.booking__room-image--night-two {
+    background-image: url(../assets/image/02-night.jpg);
+}
+
+.booking__room-image--night-three {
+    background-image: url(../assets/image/03-night.jpg);
+}
+
+.booking__room-image--night-four {
+    background-image: url(../assets/image/04-night.jpg);
+}
+
+.booking__room-image--night-five {
+    background-image: url(../assets/image/05-night.jpg);
+}
+
+.booking__room-image--night-six {
+    background-image: url(../assets/image/06-night.jpg);
+}
+
+.booking__room-image--night-seven {
+    background-image: url(../assets/image/07-night.jpg);
+}
+
+.booking__room-image--night-eight {
+    background-image: url(../assets/image/08-night.jpg);
+}
+
+.booking__room-image--night-nine {
+    background-image: url(../assets/image/09-night.jpg);
 }
 
 
 
 
-@media screen and (min-width: 700px){
-    
-    /* header */ 
+@media screen and (min-width: 700px) {
+
+    /* header */
 
 
     .header__mobile-menu {
@@ -288,14 +456,10 @@ main {
     }
 
     .header__menu-link {
-        text-decoration: none;
-        color: black;
-        height: 100%;
-        width: 100%;
-        padding:1rem 2rem;
+        padding: 1rem 2rem;
     }
 
-    /* footer */ 
+    /* footer */
 
     .footer__mobile {
         display: none;
@@ -307,5 +471,17 @@ main {
 
     .footer__content-container {
         grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+    }
+
+    /* Booking */
+
+    .booking__room-card {
+        
+       grid-template-columns: repeat(2, 1fr);
+       grid-template-rows: 1fr;
+    }
+
+    .booking__text-container {
+        padding-left: 1.5rem;
     }
 }
