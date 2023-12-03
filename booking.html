@@ -11,10 +11,9 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <figure class="header_logo"></figure>
+            <figure class="header_company-logo"></figure>
 
             <section class="header__mobile-menu">
-
                 <input id="burgerToggle" type="checkbox">
                 <label for="burgerToggle" class="header__burger-menu">
                     <figure class="header__burger-btn"></figure>
@@ -36,7 +35,6 @@
                         </li>
                     </ul>
                 </nav>
-
             </section>
 
             <section class="header__desktop-menu">
@@ -59,121 +57,136 @@
             </section>
         </header>
 
-        <section class="booking">
-            <form class="booking__form">
-                <h2 class="booking__form-title"> Book your room </h2>
-                <span class="booking__form-container booking__form-container--left">
-                    <label for="roomType"> type of nature </label>
-                    <select id="roomType">
-                        <option value=""> ... </option>
-                        <option value=""> Lake </option>
-                        <option value=""> Forrest </option>
-                        <option value=""> Mounten </option>
-                    </select>
-                </span>
-                <span class="booking__form-container booking__form-container--right">
-                    <label for="rooms"> How many rooms </label>
-                    <input type="number" name="" id="rooms" min="1" value="1">
-                </span>
-                <span class="booking__form-container booking__form-container--left">
-                    <label for="arivalDate"> Arival </label>
-                    <input type="date" id="arivalDate">
-                </span>
-                <span class="booking__form-container booking__form-container--right">
-                    <label for="departedDate"> Depature </label>
-                    <input type="date" id="departedDate">
-                </span>
+        <main class="main">
+            <section class="booking">
+                <form class="booking__form">
+                    <h2 class="booking__form-title"> Book your room </h2>
+                    <article class="booking-form-grid">
+                        <span class="booking__form-container booking__form-container--left">
+                            <label class="booking__form-label" for="roomType"> Type of Room: </label>
+                            <select class="booking__form-input" id="roomType">
+                                <option value="n-a"> ... </option>
+                                <option value="lakeRoom"> Lake </option>
+                                <option value="forrestRoom"> Forrest </option>
+                                <option value="mountenRoom"> Mounten </option>
+                            </select>
+                        </span>
 
-                <h3 class="booking__form-sub-title"> Cabin 1 </h3>
-                <span class="booking__form-container booking__form-container--left">
-                    <label for="adultsRoomOne"> Adults </label>
-                    <input type="number" name="" id="adultsRoomOne" min="1" max="2" value="2">
-                </span>
-                <span class="booking__form-container booking__form-container--right">
-                    <label for="childenRoomOne"> children </label>
-                    <input type="number" name="" id="childenRoomOne" min="0" max="3" value="0">
-                </span>
+                        <span class="booking__form-container booking__form-container--right">
+                            <label class="booking__form-label" for="rooms" > How many rooms: </label>
+                            <input class="booking__form-input" type="number" name="" id="rooms" min="1" value="1">
+                        </span>
 
-                <h3 class="booking__form-sub-title"> Cabin 2 </h3>
-                <span class="booking__form-container booking__form-container--left">
-                    <label for="adultsRoomOne"> Adults </label>
-                    <input type="number" name="" id="adultsRoomTwo" min="1" max="2" value="2">
-                </span>
-                <span class="booking__form-container booking__form-container--right">
-                    <label for="childenRoomOne"> children </label>
-                    <input type="number" name="" id="childenRoomTwo" min="0" max="3" value="0">
-                </span>
-                <h3 class="booking__form-sub-title"> Cabin 3 </h3>
-                <span class="booking__form-container booking__form-container--left">
-                    <label for="adultsRoomOne"> Adults </label>
-                    <input type="number" name="" id="adultsRoomThree" min="1" max="2" value="2">
-                </span>
-                <span class="booking__form-container booking__form-container--right">
-                    <label for="childenRoomOne"> children </label>
-                    <input type="number" name="" id="childenRoomThree" min="0" max="3" value="0">
-                </span>
-            </form>
+                        <span class="booking__form-container booking__form-container--left">
+                            <label class="booking__form-label" for="arivalDate"> Arival date: </label>
+                            <input class="booking__form-input" type="date" id="arivalDate">
+                        </span>
 
-            <article class="booking__room-card">
-                <figure class="booking__room-image booking__room-image--day-one"></figure>
-                <section class="booking__text-container">
-                    <h2 Class="booking__room-title"> Room title </h2>
-                    <p class="booking__room-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Explicabo quaerat similique consequatur animi porro aliquid dicta.
-                        Neque recusandae asperiores totam ipsam in? Dolore aut maxime,
-                        est velit omnis autem unde.
-                    </p>
-                    <p class="booking__room-price"> 125 / night</p>
-                    <button class="booking__room-card-btn"> More info </button>
-                    <button class="booking__room-card-btn"> Book </button>
-                </section>
-            </article>
-            <article class="booking__room-card">
-                <figure class="booking__room-image booking__room-image--day-two"></figure>
-                <section class="booking__text-container">
-                    <h2 Class="booking__room-title"> Room title </h2>
-                    <p class="booking__room-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Explicabo quaerat similique consequatur animi porro aliquid dicta.
-                        Neque recusandae asperiores totam ipsam in? Dolore aut maxime,
-                        est velit omnis autem unde.
-                    </p>
-                    <p class="booking__room-price"> 125 / night</p>
-                    <button class="booking__room-card-btn"> More info </button>
-                    <button class="booking__room-card-btn"> Book </button>
-                </section>
-            </article>
-            <article class="booking__room-card">
-                <figure class="booking__room-image booking__room-image--day-four"></figure>
-                <section class="booking__text-container">
-                    <h2 Class="booking__room-title"> Room title </h2>
-                    <p class="booking__room-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Explicabo quaerat similique consequatur animi porro aliquid dicta.
-                        Neque recusandae asperiores totam ipsam in? Dolore aut maxime,
-                        est velit omnis autem unde.
-                    </p>
-                    <p class="booking__room-price"> 125 / night</p>
-                    <button class="booking__room-card-btn"> More info </button>
-                    <button class="booking__room-card-btn"> Book </button>
-                </section>
-            </article>
-            <article class="booking__room-card">
-                <figure class="booking__room-image booking__room-image--day-five"></figure>
-                <section class="booking__text-container">
-                    <h2 Class="booking__room-title"> Room title </h2>
-                    <p class="booking__room-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Explicabo quaerat similique consequatur animi porro aliquid dicta.
-                        Neque recusandae asperiores totam ipsam in? Dolore aut maxime,
-                        est velit omnis autem unde.
-                    </p>
-                    <p class="booking__room-price"> 125 / night</p>
-                    <button class="booking__room-card-btn"> More info </button>
-                    <button class="booking__room-card-btn"> Book </button>
-                </section>
-        </section>
+                        <span class="booking__form-container booking__form-container--right">
+                            <label class="booking__form-label" for="departedDate"> Depature date: </label>
+                            <input class="booking__form-input" type="date" id="departedDate">
+                        </span>
+                    </article>
+                    <h3 class="booking__form-sub-title"> Cabin 1 </h3>
+
+                    <article class="booking-form-grid">
+                    <span class="booking__form-container booking__form-container--left">
+                        <label class="booking__form-label" for="adultsRoomOne"> Adults: </label>
+                        <input class="booking__form-input" type="number" name="" id="adultsRoomOne" min="1" max="2" value="2">
+                    </span>
+
+                    <span class="booking__form-container booking__form-container--right">
+                        <label class="booking__form-label" for="childenRoomOne"> children: </label>
+                        <input class="booking__form-input" type="number" name="" id="childenRoomOne" min="0" max="3" value="0">
+                    </span>
+</article>
+                    <h3 class="booking__form-sub-title"> Cabin 2 </h3>
+                    <article class="booking-form-grid">
+                    <span class="booking__form-container booking__form-container--left">
+                        <label class="booking__form-label" for="adultsRoomOne"> Adults: </label>
+                        <input class="booking__form-input" type="number" name="" id="adultsRoomTwo" min="1" max="2" value="2">
+                    </span>
+
+                    <span class="booking__form-container booking__form-container--right">
+                        <label class="booking__form-label" for="childenRoomOne"> children: </label>
+                        <input class="booking__form-input" type="number" name="" id="childenRoomTwo" min="0" max="3" value="0">
+                    </span>
+                </article>
+                    <h3 class="booking__form-sub-title"> Cabin 3 </h3>
+                    <article class="booking-form-grid">
+                    <span class="booking__form-container booking__form-container--left">
+                        <label class="booking__form-label" for="adultsRoomOne"> Adults: </label>
+                        <input class="booking__form-input" type="number" name="" id="adultsRoomThree" min="1" max="2" value="2">
+                    </span>
+
+                    <span class="booking__form-container booking__form-container--right">
+                        <label class="booking__form-label" for="childenRoomOne"> children: </label>
+                        <input class="booking__form-input" type="number" name="" id="childenRoomThree" min="0" max="3" value="0">
+                    </span>
+                </article>
+                </form>
+
+                <article class="booking__room-card">
+                    <figure class="booking__room-image booking__room-image--day-one"></figure>
+                    <section class="booking__text-container">
+                        <h2 Class="booking__room-title"> Room title </h2>
+                        <p class="booking__room-description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Explicabo quaerat similique consequatur animi porro aliquid dicta.
+                            Neque recusandae asperiores totam ipsam in? Dolore aut maxime,
+                            est velit omnis autem unde.
+                        </p>
+                        <p class="booking__room-price"> 125 / night</p>
+                        <button class="booking__room-card-btn"> More info </button>
+                        <button class="booking__room-card-btn"> Book </button>
+                    </section>
+                </article>
+                <article class="booking__room-card">
+                    <figure class="booking__room-image booking__room-image--day-two"></figure>
+                    <section class="booking__text-container">
+                        <h2 Class="booking__room-title"> Room title </h2>
+                        <p class="booking__room-description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Explicabo quaerat similique consequatur animi porro aliquid dicta.
+                            Neque recusandae asperiores totam ipsam in? Dolore aut maxime,
+                            est velit omnis autem unde.
+                        </p>
+                        <p class="booking__room-price"> 125 / night</p>
+                        <button class="booking__room-card-btn"> More info </button>
+                        <button class="booking__room-card-btn"> Book </button>
+                    </section>
+                </article>
+                <article class="booking__room-card">
+                    <figure class="booking__room-image booking__room-image--day-four"></figure>
+                    <section class="booking__text-container">
+                        <h2 Class="booking__room-title"> Room title </h2>
+                        <p class="booking__room-description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Explicabo quaerat similique consequatur animi porro aliquid dicta.
+                            Neque recusandae asperiores totam ipsam in? Dolore aut maxime,
+                            est velit omnis autem unde.
+                        </p>
+                        <p class="booking__room-price"> 125 / night</p>
+                        <button class="booking__room-card-btn"> More info </button>
+                        <button class="booking__room-card-btn"> Book </button>
+                    </section>
+                </article>
+                <article class="booking__room-card">
+                    <figure class="booking__room-image booking__room-image--day-five"></figure>
+                    <section class="booking__text-container">
+                        <h2 Class="booking__room-title"> Room title </h2>
+                        <p class="booking__room-description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Explicabo quaerat similique consequatur animi porro aliquid dicta.
+                            Neque recusandae asperiores totam ipsam in? Dolore aut maxime,
+                            est velit omnis autem unde.
+                        </p>
+                        <p class="booking__room-price"> 125 / night</p>
+                        <button class="booking__room-card-btn"> More info </button>
+                        <button class="booking__room-card-btn"> Book </button>
+                    </section>
+            </section>
+        </main>
 
         <footer class="footer">
             <section class="footer__mobile">
@@ -189,8 +202,10 @@
                         <h3 class="footer__title"> Nav</h3>
                         <ul class="footer__list">
                             <li class="footer__list-item"> <a href="index.html" class="footer__menu-link">Home</a> </li>
-                            <li class="footer__list-item"> <a href="booking.html" class="footer__menu-link">booking</a></li>
-                            <li class="footer__list-item"> <a href="facilitis.html" class="footer__menu-link">facilitis</a> </li>
+                            <li class="footer__list-item"> <a href="booking.html" class="footer__menu-link">booking</a>
+                            </li>
+                            <li class="footer__list-item"> <a href="facilitis.html"
+                                    class="footer__menu-link">facilitis</a> </li>
                             <li class="footer__list-item"> <a href="about.html" class="footer__menu-link">about</a></li>
                         </ul>
                     </article>
