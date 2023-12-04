@@ -13,7 +13,6 @@
     margin: 0 auto;
 }
 
-
 /* Header Section Styling */
 
 header {
@@ -39,7 +38,7 @@ header {
     background-size: contain;
 }
 
-/* Burger menu styling */
+/* Burger menu section styling */
 
 input[type="checkbox"] {
     display: none;
@@ -98,7 +97,7 @@ input[type="checkbox"] {
     right: 0;
 }
 
-/*  menu styling */
+/*  header menu section styling */
 
 .header__menu-container {
     position: fixed;
@@ -140,7 +139,52 @@ input[type="checkbox"] {
     display: none;
 }
 
+/* Hero Section Styling */
 
+.hero {
+    height: 92vh;
+
+    background-image: url(..//assets/image/03-night.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .4);
+}
+
+.hero__btn-container {
+    margin-bottom: 3rem;
+    backdrop-filter: blur(2px);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.hero__btn {
+    padding: .8rem 2rem;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: black;
+    cursor: pointer;
+}
+
+.hero__btn:hover {
+    opacity: .8;
+}
+
+.hero__title {
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 20rem;
+}
+
+/* Main Section Styling */
 
 .main__devide-line {
     display: flex;
@@ -161,8 +205,268 @@ input[type="checkbox"] {
     color: black;
 }
 
+.main__devide-image {
+    width: 3.5rem;
+    margin: 0 3rem;
+}
+
 .main__devide-line--primary-bg {
     background-color: var(--primary-color);
+}
+
+.main__grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto, 1fr);
+}
+
+.main__text-container {
+    padding: 2rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .4);
+    margin-bottom: 2rem;
+}
+
+.main__color-section {
+    background-color: var(--primary-color);
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__section-title {
+    padding: .5rem 0;
+}
+
+.main__section-sub-title {
+    padding: .5rem 0;
+}
+
+.main__card-title {
+    padding: .5rem 0;
+}
+
+.main__card-title--grid-area {
+    grid-area: title;
+    text-align: start;
+}
+
+.main__card-sub-title {
+    padding: .5rem 0;
+}
+
+.main__card-sub-title--grid-area {
+    grid-area: subTitle;
+    text-align: start;
+}
+
+.main__description-text {
+    margin:2rem 0 3rem;
+}
+
+.main__description-text--grid-area {
+    grid-area: description;
+}
+
+.main__price-text {
+    grid-area: price;
+    text-align: end;
+}
+
+.main__primary-btn {
+    border: none;
+    background-color: var(--primary-color);
+    color: black;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    padding: 1rem;
+    margin: .5rem;
+    border-radius: 8px;
+}
+
+.main__primary-btn--grid-area:nth-of-type(1) {
+    grid-area: btnOne;
+}
+
+.main__primary-btn--grid-area:nth-of-type(2) {
+    grid-area: btnTwo;
+}
+
+.main__secondary-btn {
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    background-color: black;
+    color: white;
+    border-radius: 12px;
+    align-self: flex-end;
+}
+
+.main__card-image {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main__card-image--day-one {
+    background-image: url(../assets/image/01-day.jpg);
+}
+
+.main__card-image--day-two {
+    background-image: url(../assets/image/02-day.jpg);
+}
+
+.main__card-image--day-three {
+    background-image: url(../assets/image/03-day.jpg);
+}
+
+.main__card-image--day-four {
+    background-image: url(../assets/image/04-day.jpg);
+}
+
+.main__card-image--day-five {
+    background-image: url(../assets/image/05-day.jpg);
+}
+
+.main__card-image--day-six {
+    background-image: url(../assets/image/06-day.jpg);
+}
+
+.main__card-image--day-seven {
+    background-image: url(../assets/image/07-day.jpg);
+}
+
+.main__card-image--day-eight {
+    background-image: url(../assets/image/08-day.jpg);
+}
+
+.main__card-image--day-nine {
+    background-image: url(../assets/image/09-day.jpg);
+}
+
+.main__card-image--night-one {
+    background-image: url(../assets/image/01-night.jpg);
+}
+
+.main__card-image--night-two {
+    background-image: url(../assets/image/02-night.jpg);
+}
+
+.main__card-image--night-three {
+    background-image: url(../assets/image/03-night.jpg);
+}
+
+.main__card-image--night-four {
+    background-image: url(../assets/image/04-night.jpg);
+}
+
+.main__card-image--night-five {
+    background-image: url(../assets/image/05-night.jpg);
+}
+
+.main__card-image--night-six {
+    background-image: url(../assets/image/06-night.jpg);
+}
+
+.main__card-image--night-seven {
+    background-image: url(../assets/image/07-night.jpg);
+}
+
+.main__card-image--night-eight {
+    background-image: url(../assets/image/08-night.jpg);
+}
+
+.main__card-image--night-nine {
+    background-image: url(../assets/image/09-night.jpg);
+}
+
+.main__high-light {
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(3, 1fr));
+    gap: 1rem
+}
+
+.main__high-light-card {
+    margin: 30px auto 0;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .4);
+    padding: 1rem;
+}
+
+.main__high-ligt-image {
+    width: 100%;
+    transform: translateY(-30px);
+    border-radius: 8px;
+}
+
+.main__booking-room-card {
+    width: 100%;
+    margin: 3rem auto;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .4);
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.main__booking-text-container {
+    display: grid;
+    padding-top: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1rem;
+    grid-template-areas:
+        "title price"
+        "description description"
+        "description description"
+        "btnOne btnTwo";
+}
+
+/* Booking Section Styling */ 
+
+.booking-form {
+    margin: 6rem auto 0;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .4);
+}
+
+.booking-form__title {
+    padding: .5rem 0;
+}
+
+.booking-form__sub-title {
+    padding: .5rem 0;
+}
+
+.booking-form__grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.booking-form__flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: .5rem;
+    max-width: 100%;
+}
+
+.booking-form__label {
+    font-size: 1.2rem;
+    margin: .5rem 0 .5rem;
+}
+
+.booking-form__input {
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    border: none;
+    width: 100%;
+    box-shadow: 0 0 .3rem rgba(0, 0, 0, .4);
 }
 
 /* footer section styling */
@@ -216,354 +520,6 @@ input[type="checkbox"] {
     list-style: none;
 }
 
-/* index html styling */
-
-/* Hero Section Styling */
-
-.hero {
-    height: 92vh;
-
-    background-image: url(..//assets/image/03-night.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    box-shadow: 0 0 2rem rgba(0, 0, 0, .4);
-}
-
-.hero__btn-container {
-    margin-bottom: 3rem;
-    backdrop-filter: blur(2px);
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.hero__btn {
-    padding: .8rem 2rem;
-    border-radius: 10px;
-    background-color: var(--primary-color);
-    color: black;
-    cursor: pointer;
-}
-
-.hero__btn:hover {
-    opacity: .8;
-}
-
-.hero__title {
-    font-size: 4rem;
-    color: white;
-    margin-bottom: 20rem;
-}
-
-/* Weclcome section styling */
-
-.welcome {
-    background-color: var(--primary-color);
-    padding: 0 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.welcome__small-logo {
-    width: 3.5rem;
-    margin: 0 3rem;
-}
-
-.welcome__title {
-    margin: 0 0 1rem;
-}
-
-.welcome__sub-titl {
-    margin: 1rem 0;
-}
-
-.welcome__description-text {
-    margin: 1rem 0;
-}
-
-.welcome__btn {
-    margin: 2rem 0;
-    padding: 1rem 2rem;
-    background-color: black;
-    color: white;
-    border-radius: 12px;
-    align-self: flex-end;
-}
-
-/* high-light section styling*/
-
-.high-light {
-    margin: 2rem 0;
-    padding: 1rem;
-}
-
-.high-light__container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(3, 1fr));
-    gap: 1rem
-}
-
-.high-light__information-card {
-    margin: 30px auto 0;
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 0 2rem rgba(0, 0, 0, .4);
-    padding: 1rem;
-}
-
-.high-light__img {
-    
-    width: 100%;
-    transform: translateY(-30px);
-    border-radius: 8px;
-}
-
-.high-light__title {
-    font-size: 1.8rem;
-}
-
-.high-light__info-text {
-    margin:2rem 0 3rem;
-}
-
-.high-light__btn {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background-color: var(--primary-color);
-}
-
-
-/* booking html styling */
-.booking {
-    margin: 6rem auto 0;
-    width: 80%;
-}
-
-.booking__form {
-    width: 100%;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, .4);
-}
-
-.booking__form-title {
-    
-    padding: .5rem 0;
-}
-
-.booking__form-sub-title {
-    padding: .5rem 0;
-}
-
-.booking-form-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
-.booking__form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: .5rem;
-    max-width: 100%;
-}
-
-
-
-.booking__form-label {
-    font-size: 1.2rem;
-    margin: .5rem 0 .5rem;
-}
-
-.booking__form-input {
-    padding: .5rem 1rem;
-    border-radius: 20px;
-    border: none;
-    width: 100%;
-    box-shadow: 0 0 .3rem rgba(0, 0, 0, .4);
-}
-
-.booking__room-card {
-    width: 100%;
-    margin: 3rem auto;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, .4);
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-}
-
-.booking__text-container {
-    display: grid;
-    padding-top: 1.5rem;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 1rem;
-    grid-template-areas:
-        "title price"
-        "text text"
-        "text text"
-        "btnOne btnTwo";
-}
-
-.booking__room-title {
-    grid-area: title;
-    text-align: start;
-}
-
-.booking__room-description {
-    grid-area: text;
-    padding: 1rem 0;
-}
-
-.booking__room-price {
-    grid-area: price;
-    text-align: end;
-}
-
-.booking__room-card-btn {
-    border: none;
-    background-color: var(--primary-color);
-    color: black;
-    cursor: pointer;
-    transition: all .2s ease-in-out;
-    padding: 1rem;
-    margin: .5rem;
-    border-radius: 8px;
-}
-
-.booking__room-card-btn:hover {
-    color: var(--primary-color);
-    background-color: black;
-}
-
-.booking__room-card-btn:nth-of-type(1) {
-    grid-area: btnOne;
-}
-
-.booking__room-card-btn:nth-of-type(2) {
-    grid-area: btnTwo;
-}
-
-
-.booking__room-image {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.booking__room-image--day-one {
-    background-image: url(../assets/image/01-day.jpg);
-}
-
-.booking__room-image--day-two {
-    background-image: url(../assets/image/02-day.jpg);
-}
-
-.booking__room-image--day-three {
-    background-image: url(../assets/image/03-day.jpg);
-}
-
-.booking__room-image--day-four {
-    background-image: url(../assets/image/04-day.jpg);
-}
-
-.booking__room-image--day-five {
-    background-image: url(../assets/image/05-day.jpg);
-}
-
-.booking__room-image--day-six {
-    background-image: url(../assets/image/06-day.jpg);
-}
-
-.booking__room-image--day-seven {
-    background-image: url(../assets/image/07-day.jpg);
-}
-
-.booking__room-image--day-eight {
-    background-image: url(../assets/image/08-day.jpg);
-}
-
-.booking__room-image--day-nine {
-    background-image: url(../assets/image/09-day.jpg);
-}
-
-.booking__room-image--night-one {
-    background-image: url(../assets/image/01-night.jpg);
-}
-
-.booking__room-image--night-two {
-    background-image: url(../assets/image/02-night.jpg);
-}
-
-.booking__room-image--night-three {
-    background-image: url(../assets/image/03-night.jpg);
-}
-
-.booking__room-image--night-four {
-    background-image: url(../assets/image/04-night.jpg);
-}
-
-.booking__room-image--night-five {
-    background-image: url(../assets/image/05-night.jpg);
-}
-
-.booking__room-image--night-six {
-    background-image: url(../assets/image/06-night.jpg);
-}
-
-.booking__room-image--night-seven {
-    background-image: url(../assets/image/07-night.jpg);
-}
-
-.booking__room-image--night-eight {
-    background-image: url(../assets/image/08-night.jpg);
-}
-
-.booking__room-image--night-nine {
-    background-image: url(../assets/image/09-night.jpg);
-}
-
-
-/* facititis styling */
-
-.facilitis {
-    margin-top: 4rem;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start
-}
-
-.facilitis__room-container {
-    margin-bottom: 4rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(auto, 1fr);
-}
-
-.facilitis__room-image {
-    width: 100%;
-    height: 100%;
-}
-
-
-
-.facilitis__text-container {
-    padding: 2rem;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, .4);
-    margin-bottom: 2rem;
-}
 
 @media screen and (min-width: 700px) {
 
@@ -601,6 +557,80 @@ input[type="checkbox"] {
         width: 40%;
     }
 
+    .main__high-light {
+        margin: 3rem 0;
+        grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    }
+
+    .main__high-light-card {
+        margin: 0 auto 0;
+    }
+
+    .main__booking-room-card {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "imgOne txtContainer";
+    }
+
+    .main__booking-text-container {
+        grid-area: txtContainer;
+        padding-left: 1.5rem;
+    }
+
+    .main__grid-container {
+        gap: 2rem 0;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "imgOne imgOne ."
+            ". imgTwo imgTwo"
+            "imgThree imgThree ."
+            ". imgFour imgFour"
+            "imgL imgL imgL";
+    }
+
+    .main__text-container {
+        margin-bottom: 0;
+    }
+
+    .main__card-image:nth-of-type(1) {
+        grid-area: imgOne;
+    }
+    
+    .main__card-image:nth-of-type(2) {
+        grid-area: imgTwo;
+    }
+    
+    .main__card-image:nth-of-type(3) {
+        grid-area: imgThree;
+    }
+    
+    .main__card-image:nth-of-type(4) {
+        grid-area: imgFour;
+    }
+    
+    .main__card-image:nth-of-type(5) {
+        grid-area: imgL;
+    }
+
+    /* Booking */
+    .booking-form {
+        margin: 8rem auto 0;
+        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    }
+
+    .booking-form__grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .booking-form__flex-container {
+        display: flex;
+        flex-direction: column;
+        padding: .5rem;
+        max-width: 100%;
+    }
+
     /* footer */
 
     .footer__mobile {
@@ -613,85 +643,5 @@ input[type="checkbox"] {
 
     .footer__content-container {
         grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
-    }
-
-    /* Homepage section styling */
-
-    .high-light__container {
-        grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-    }
-
-    .high-light__information-card {
-        margin: 0 auto 0;
-    }
-
-    /* Booking */
-
-    .booking__form {
-        margin: 8rem auto 0;
-        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
-    }
-
-    .booking-form-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .booking__form-container {
-        display: flex;
-        flex-direction: column;
-        padding: .5rem;
-        max-width: 100%;
-    }
-
-    .booking__room-card {
-
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
-    }
-
-    .booking__text-container {
-        padding-left: 1.5rem;
-    }
-
-    /* facilitis */
-
-    .facilitis {
-        margin-top: 8rem;
-        gap: 2rem 0;
-    }
-
-    .facilitis__room-container {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas:
-            "imgOne imgOne ."
-            ". imgTwo imgTwo"
-            "imgThree imgThree ."
-            ". imgFour imgFour"
-            "imgL imgL imgL";
-    }
-
-    .facilitis__text-container {
-        margin-bottom: 0;
-    }
-
-    .facilitis__room-image:nth-of-type(1) {
-        grid-area: imgOne;
-    }
-
-    .facilitis__room-image:nth-of-type(2) {
-        grid-area: imgTwo;
-    }
-
-    .facilitis__room-image:nth-of-type(3) {
-        grid-area: imgThree;
-    }
-
-    .facilitis__room-image:nth-of-type(4) {
-        grid-area: imgFour;
-    }
-
-    .facilitis__room-image:nth-of-type(5) {
-        grid-area: imgL;
     }
 }
