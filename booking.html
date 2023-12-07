@@ -63,7 +63,7 @@
                 <span class="booking-form__flex-container">
                     <label class="booking-form__label" for="roomType"> Type of Room: </label>
                     <select class="booking-form__input" id="roomType">
-                        <option value="n-a"> ... </option>
+                        <option value="n-a"> All </option>
                         <option value="lakeRoom"> Lake </option>
                         <option value="forrestRoom"> Forrest </option>
                         <option value="mountenRoom"> Mounten </option>
@@ -71,8 +71,8 @@
                 </span>
 
                 <span class="booking-form__flex-container">
-                    <label class="booking-form__label" for="rooms"> How many rooms: </label>
-                    <input class="booking-form__input" type="number" name="" id="rooms" min="1" value="1">
+                    <label class="booking-form__label" for="roomNumber"> How many rooms: </label>
+                    <input class="booking-form__input" type="number" id="roomNumber" min="1" max="5"value="1">
                 </span>
 
                 <span class="booking-form__flex-container">
@@ -85,114 +85,261 @@
                     <input class="booking-form__input" type="date" id="departedDate">
                 </span>
             </article>
-            <h3 class="booking-form__sub-title"> Cabin 1 </h3>
 
-            <article class="booking-form__grid-container">
-                <span class="booking-form__flex-container">
-                    <label class="booking-form__label" for="adultsRoomOne"> Adults: </label>
-                    <input class="booking-form__input" type="number" name="" id="adultsRoomOne" min="1" max="3"
-                        value="2">
-                </span>
+            <section class="booking-form__cabin-container">
+                <h3 class="booking-form__sub-title"> Room 1 </h3>
 
-                <span class="booking-form__flex-container">
-                    <label class="booking-form__label" for="childenRoomOne"> children: </label>
-                    <input class="booking-form__input" type="number" name="" id="childenRoomOne" min="0" max="4"
-                        value="0">
-                </span>
-            </article>
-            <h3 class="booking-form__sub-title"> Cabin 2 </h3>
-            <article class="booking-form__grid-container">
-                <span class="booking-form__flex-container">
-                    <label class="booking-form__label" for="adultsRoomOne"> Adults: </label>
-                    <input class="booking-form__input" type="number" name="" id="adultsRoomTwo" min="1" max="3"
-                        value="2">
-                </span>
+                <article class="booking-form__grid-container">
+                    <span class="booking-form__flex-container">
+                        <label class="booking-form__label" for="adultsRoomOne"> Adults: </label>
+                        <input class="booking-form__input" type="number" name="" id="adultsRoomOne" min="1" max="3"
+                            value="2">
+                    </span>
 
-                <span class="booking-form__flex-container">
-                    <label class="booking-form__label" for="childenRoomOne"> children: </label>
-                    <input class="booking-form__input" type="number" name="" id="childenRoomTwo" min="0" max="4"
-                        value="0">
-                </span>
-            </article>
-            <h3 class="booking-form__sub-title"> Cabin 3 </h3>
-            <article class="booking-form__grid-container">
-                <span class="booking-form__flex-container">
-                    <label class="booking-form__label" for="adultsRoomOne"> Adults: </label>
-                    <input class="booking-form__input" type="number" name="" id="adultsRoomThree" min="1" max="3"
-                        value="2">
-                </span>
+                    <span class="booking-form__flex-container">
+                        <label class="booking-form__label" for="childenRoomOne"> Children: </label>
+                        <input class="booking-form__input" type="number" name="" id="childenRoomOne" min="0" max="4"
+                            value="0">
+                    </span>
+                </article>
+            </section>
+            <section class="booking-form__cabin-container">
+                <h3 class="booking-form__sub-title"> Room 2 </h3>
 
-                <span class="booking-form__flex-container">
-                    <label class="booking-form__label" for="childenRoomOne"> children: </label>
-                    <input class="booking-form__input" type="number" name="" id="childenRoomThree" min="0" max="4"
-                        value="0">
-                </span>
-            </article>
+                <article class="booking-form__grid-container">
+                    <span class="booking-form__flex-container">
+                        <label class="booking-form__label" for="adultsRoomTwo"> Adults: </label>
+                        <input class="booking-form__input" type="number" name="" id="adultsRoomTwo" min="1" max="3"
+                            value="2">
+                    </span>
+
+                    <span class="booking-form__flex-container">
+                        <label class="booking-form__label" for="childenRoomTwo"> Children: </label>
+                        <input class="booking-form__input" type="number" name="" id="childenRoomTwo" min="0" max="4"
+                            value="0">
+                    </span>
+                </article>
+            </section>
+            <section class="booking-form__cabin-container">
+                <h3 class="booking-form__sub-title"> Room 3 </h3>
+
+                <article class="booking-form__grid-container">
+                    <span class="booking-form__flex-container">
+                        <label class="booking-form__label" for="adultsRoomThree"> Adults: </label>
+                        <input class="booking-form__input" type="number" name="" id="adultsRoomThree" min="1" max="3"
+                            value="2">
+                    </span>
+
+                    <span class="booking-form__flex-container">
+                        <label class="booking-form__label" for="childenRoomThree"> Children: </label>
+                        <input class="booking-form__input" type="number" name="" id="childenRoomThree" min="0" max="4"
+                            value="0">
+                    </span>
+                </article>
+            </section>
+            <section class="booking-form__cabin-container">
+                <h3 class="booking-form__sub-title"> Room 4 </h3>
+
+                <article class="booking-form__grid-container">
+                    <span class="booking-form__flex-container">
+                        <label class="booking-form__label" for="adultsRoomFour"> Adults: </label>
+                        <input class="booking-form__input" type="number" name="" id="adultsRoomFour" min="1" max="3"
+                            value="2">
+                    </span>
+
+                    <span class="booking-form__flex-container">
+                        <label class="booking-form__label" for="childenRoomFour"> Children: </label>
+                        <input class="booking-form__input" type="number" name="" id="childenRoomFour" min="0" max="4"
+                            value="0">
+                    </span>
+                </article>
+            </section>
+            <section class="booking-form__cabin-container">
+                <h3 class="booking-form__sub-title"> Room 5 </h3>
+
+                <article class="booking-form__grid-container">
+                    <span class="booking-form__flex-container">
+                        <label class="booking-form__label" for="adultsRoomFive"> Adults: </label>
+                        <input class="booking-form__input" type="number" name="" id="adultsRoomFive" min="1" max="3"
+                            value="2">
+                    </span>
+
+                    <span class="booking-form__flex-container">
+                        <label class="booking-form__label" for="childenRoomFive"> Children: </label>
+                        <input class="booking-form__input" type="number" name="" id="childenRoomFive" min="0" max="4"
+                            value="0">
+                    </span>
+                </article>
+            </section>
+            <details>
+                <summary class="booking-form__available-btn"> Show </summary>
+
+                <main class="main">
+                    <h2 class="main__section-sub-title main__section-sub-title--dark"> Available Rooms: </h2>
+                    <article class="main__booking-room-card">
+                        <figure class="main__card-image main__card-image--night-two"></figure>
+                        <section class="main__booking-text-container">
+                            <h2 Class="main__card-title"> Lake View </h2>
+                            <p class="main__description-text main__description-text--grid-area">
+                                Step into the serenity of our lake view sanctuary, where the water's edge is
+                                embraced by a
+                                lush
+                                haven of greenery. The lake, cradled by banks adorned with thick foliage and vibrant
+                                flora,
+                                invites you to witness the harmonious union of liquid and land. Reflecting the
+                                abundance of
+                                life
+                                surrounding it, the lake mirrors the emerald hues of the lush vegetation, creating a
+                                symphony of
+                                green that reaches to the water's edge. This is a view that embodies the same
+                                luxurious
+                                vibrancy
+                                found in the heart of a flourishing forest.
+                            </p>
+                            <p class="main__price-text"> $150 / night</p>
+
+                            <a class="main__primary-btn main__primary-btn--grid-area" href="accommodation.html">
+                                More info
+                            </a>
+                            <a class="main__primary-btn main__primary-btn--grid-area"> Book Now </a>
+                        </section>
+                    </article>
+                    <article class="main__booking-room-card ">
+                        <figure class="main__card-image main__card-image--day-three"></figure>
+                        <section class="main__booking-text-container">
+                            <h2 Class="main__card-title"> Lake View </h2>
+                            <p class="main__description-text main__description-text--grid-area">
+                                Step into the serenity of our lake view sanctuary, where the water's edge is
+                                embraced by a
+                                lush
+                                haven of greenery. The lake, cradled by banks adorned with thick foliage and vibrant
+                                flora,
+                                invites you to witness the harmonious union of liquid and land. Reflecting the
+                                abundance of
+                                life
+                                surrounding it, the lake mirrors the emerald hues of the lush vegetation, creating a
+                                symphony of
+                                green that reaches to the water's edge. This is a view that embodies the same
+                                luxurious
+                                vibrancy
+                                found in the heart of a flourishing forest.
+                            </p>
+                            <p class="main__price-text "> $150 / night</p>
+                            <a class="main__primary-btn main__primary-btn--grid-area" href="accommodation.html">
+                                More info
+                            </a>
+                            <a class="main__primary-btn main__primary-btn--grid-area"> Book Now </a>
+                        </section>
+                    </article>
+                    <article class="main__booking-room-card">
+                        <figure class="main__card-image main__card-image--day-five"></figure>
+                        <section class="main__booking-text-container">
+                            <h2 Class="main__card-title "> Lake View </h2>
+                            <p class="main__description-text main__description-text--grid-area">
+                                Step into the serenity of our lake view sanctuary, where the water's edge is
+                                embraced by a
+                                lush
+                                haven of greenery. The lake, cradled by banks adorned with thick foliage and vibrant
+                                flora,
+                                invites you to witness the harmonious union of liquid and land. Reflecting the
+                                abundance of
+                                life
+                                surrounding it, the lake mirrors the emerald hues of the lush vegetation, creating a
+                                symphony of
+                                green that reaches to the water's edge. This is a view that embodies the same
+                                luxurious
+                                vibrancy
+                                found in the heart of a flourishing forest.
+                            </p>
+                            <p class="main__price-text"> $150 / night</p>
+                            <a class="main__primary-btn main__primary-btn--grid-area" href="accommodation.html">
+                                More info
+                            </a>
+                            <a class="main__primary-btn main__primary-btn--grid-area"> Book Now </a>
+                        </section>
+                    </article>
+                    <article class="main__booking-room-card">
+                        <figure class="main__card-image main__card-image--day-nine"></figure>
+                        <section class="main__booking-text-container">
+                            <h2 Class="main__card-title"> Lake View </h2>
+                            <p class="main__description-text main__description-text--grid-area">
+                                Step into the serenity of our lake view sanctuary, where the water's edge is
+                                embraced by a
+                                lush
+                                haven of greenery. The lake, cradled by banks adorned with thick foliage and vibrant
+                                flora,
+                                invites you to witness the harmonious union of liquid and land. Reflecting the
+                                abundance of
+                                life
+                                surrounding it, the lake mirrors the emerald hues of the lush vegetation, creating a
+                                symphony of
+                                green that reaches to the water's edge. This is a view that embodies the same
+                                luxurious
+                                vibrancy
+                                found in the heart of a flourishing forest.
+                            </p>
+                            <p class="main__price-text "> $150 / night</p>
+                            <a class="main__primary-btn main__primary-btn--grid-area" href="accommodation.html">
+                                More info
+                            </a>
+                            <a class="main__primary-btn main__primary-btn--grid-area"> Book Now </a>
+                        </section>
+                    </article>
+            </details>
+
+            <section class="main__high-light">
+                <h2 class="main__section-title main__section-title--dark"> Seasonal highlights </h2>
+                <article class="main__high-light-card">
+                    <img src="./assets/unsplash/kira-auf-der-heide-1FilXQqn9L4-unsplash.jpg" alt="image"
+                        class="main__high-ligt-image">
+                    <h3 class="main__card-title"> Green Holiday Magic </h3>
+                    <p class="main__description-text">
+                        Celebrate the holiday season with us in an environmentally conscious way. Our Eco-Friendly
+                        Festivities offer a green twist on traditional winter celebrations. Join us for sustainable
+                        holiday workshops, where you can create handmade decorations using recycled materials.
+                        Experience the joy of eco-conscious gift-giving with our local artisan market featuring
+                        handmade, sustainable products. Enjoy winter-themed activities that embrace the magic of the
+                        season while leaving a minimal environmental footprint.
+                    </p>
+                    <a class="main__primary-btn"> Learn More</a>
+                </article>
+                <article class="main__high-light-card">
+                    <img src="./assets/unsplash/james-wheeler-HkzVSEK80cQ-unsplash.jpg" alt="image"
+                        class="main__high-ligt-image">
+                    <h3 class="main__card-title"> Explore the Icy Wilderness
+                    </h3>
+                    <p class="main__description-text">
+                        Embark on an unforgettable Arctic adventure with our Eco-Expeditions. Experience the magic of
+                        the winter wilderness through guided eco-friendly activities like dog sledding and ice fishing.
+                        Our commitment to sustainability extends even to our winter excursions, ensuring minimal impact
+                        on the delicate ecosystem. Return to our cozy, energy-efficient lodges after a day of
+                        exploration, where you can unwind in comfort and relive the day's Arctic wonders by the warmth
+                        of the fireplace.
+                    </p>
+                    <a class="main__primary-btn"> Learn More</a>
+                </article>
+                <article class="main__high-light-card main__high-light-card--large">
+                    <img src="./assets/unsplash/nataliia-kalabina-vy0mw2EVyY0-unsplash.jpg" alt="image"
+                        class="main__high-ligt-image">
+                    <h3 class="main__card-title"> Embrace Winter Wellness
+                    </h3>
+                    <p class="main__description-text">
+                        Indulge in the ultimate winter wellness experience with our Snowflake Spa Retreat. Immerse
+                        yourself in the soothing ambiance of our eco-friendly spa, where the crisp mountain air and
+                        snowy landscapes provide a backdrop to rejuvenation. Pamper yourself with environmentally
+                        conscious spa treatments, such as hot stone massages and revitalizing winter skincare rituals.
+                        Unwind in our heated outdoor hot tubs, surrounded by the enchanting beauty of snow-covered
+                        trees. Embrace the tranquility of winter and emerge from the spa feeling refreshed, revitalized,
+                        and deeply connected to the season.
+                    </p>
+                    <a class="main__primary-btn"> Learn More</a>
+                </article>
+            </section>
+
+            </main>
+
+
         </form>
-
-        <main class="main">
-            <article class="main__booking-room-card">
-                <figure class="main__card-image main__card-image--day-one"></figure>
-                <section class="main__booking-text-container">
-                    <h2 Class="main__card-title"> Room title </h2>
-                    <p class="main__description-text main__description-text--grid-area">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Explicabo quaerat similique consequatur animi porro aliquid dicta.
-                        Neque recusandae asperiores totam ipsam in? Dolore aut maxime,
-                        est velit omnis autem unde.
-                    </p>
-                    <p class="main__price-text"> $150 / night</p>
-
-                    <a class="main__primary-btn main__primary-btn--grid-area" href="accommodation.html"> More info </a>
-                    <a class="main__primary-btn main__primary-btn--grid-area"> Book </a>
-                </section>
-            </article>
-            <article class="main__booking-room-card ">
-                <figure class="main__card-image main__card-image--day-six"></figure>
-                <section class="main__booking-text-container">
-                    <h2 Class="main__card-title"> Room title </h2>
-                    <p class="main__description-text main__description-text--grid-area">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Explicabo quaerat similique consequatur animi porro aliquid dicta.
-                        Neque recusandae asperiores totam ipsam in? Dolore aut maxime,
-                        est velit omnis autem unde.
-                    </p>
-                    <p class="main__price-text "> $150 / night</p>
-                    <a class="main__primary-btn main__primary-btn--grid-area" href="accommodation.html"> More info </a>
-                    <a class="main__primary-btn main__primary-btn--grid-area"> Book </a>
-                </section>
-            </article>
-            <article class="main__booking-room-card">
-                <figure class="main__card-image main__card-image--day-five"></figure>
-                <section class="main__booking-text-container">
-                    <h2 Class="main__card-title "> Room title </h2>
-                    <p class="main__description-text main__description-text--grid-area">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Explicabo quaerat similique consequatur animi porro aliquid dicta.
-                        Neque recusandae asperiores totam ipsam in? Dolore aut maxime,
-                        est velit omnis autem unde.
-                    </p>
-                    <p class="main__price-text"> $150 / night</p>
-                    <a class="main__primary-btn main__primary-btn--grid-area" href="accommodation.html"> More info </a>
-                    <a class="main__primary-btn main__primary-btn--grid-area"> Book </a>
-                </section>
-            </article>
-            <article class="main__booking-room-card">
-                <figure class="main__card-image main__card-image--day-four"></figure>
-                <section class="main__booking-text-container">
-                    <h2 Class="main__card-title"> Room title </h2>
-                    <p class="main__description-text main__description-text--grid-area">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Explicabo quaerat similique consequatur animi porro aliquid dicta.
-                        Neque recusandae asperiores totam ipsam in? Dolore aut maxime,
-                        est velit omnis autem unde.
-                    </p>
-                    <p class="main__price-text "> $150 / night</p>
-                    <a class="main__primary-btn main__primary-btn--grid-area" href="accommodation.html"> More info </a>
-                    <a class="main__primary-btn main__primary-btn--grid-area"> Book </a>
-                </section>
-
-        </main>
 
         <footer class="footer">
             <section class="footer__mobile">
@@ -212,7 +359,8 @@
                             </li>
                             <li class="footer__list-item"> <a href="accommodation.html"
                                     class="footer__menu-link">Accommodation</a> </li>
-                            <li class="footer__list-item"> <a href="about.html" class="footer__menu-link">about Us</a></li>
+                            <li class="footer__list-item"> <a href="about.html" class="footer__menu-link">about Us</a>
+                            </li>
                         </ul>
                     </article>
 

@@ -21,7 +21,7 @@ html {
     --dark-color: #081713;
     --medium-color: #e2e4e3;
     --light-color: #FBFDFC;
-    --shadow: 0 0 1.5rem rgba(0, 0, 0, .7);
+    --shadow-box: 0 0 .5rem rgba(0, 0, 0, .1);
 }
 
 .wrapper {
@@ -43,7 +43,7 @@ header {
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-box);
 }
 
 .header__company-logo {
@@ -81,7 +81,7 @@ input[type="checkbox"] {
     height: 3px;
     border-radius: 2px;
     width: 1.8rem;
-    background-color: var(--primary-color);
+    background-color: var(--light-color);
     transition: all .4s ease-in-out;
     mix-blend-mode: difference;
 
@@ -124,7 +124,7 @@ input[type="checkbox"] {
     padding: .5rem 1rem;
     background-color: var(--light-color);
     border-radius: 4px;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-box);
     transition: all .5s ease-in-out;
     text-align: center;
     z-index: 1;
@@ -156,6 +156,9 @@ input[type="checkbox"] {
     text-decoration: underline;
 }
 
+.header__menu-link--light {
+    color: var(--light-color);
+}
 
 .header__menu-link--active {
     color: var(--primary-color);
@@ -180,7 +183,7 @@ input[type="checkbox"] {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-box);
 }
 
 .hero__btn-container {
@@ -197,10 +200,11 @@ input[type="checkbox"] {
     padding: .8rem 3rem;
     border-radius: 30px;
     background-color: var(--primary-color);
-    color: var(--dark-color);
+    color: black;
     cursor: pointer;
     font-size: .9rem;
     text-decoration: none;
+    font-weight: 700;
     font-family: 'Maven Pro', sans-serif;
 }
 
@@ -254,7 +258,7 @@ input[type="checkbox"] {
 
 .main__text-container {
     padding: 2rem;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-box);
     background-color: var(--light-color);
     margin-bottom: 2rem;
 }
@@ -331,18 +335,19 @@ input[type="checkbox"] {
 }
 
 .main__price-text {
+    margin: auto 0;
     font-size: .9rem;
     grid-area: price;
     text-align: end;
-    color: var(--medium-color);
+    color: var(--dark-color);
+    opacity: .7;
 }
 
 .main__primary-btn {
     display: inline-block;
     border: none;
     background-color: var(--primary-color);
-    color: var(--dark-color);
-    border: solid 1px var(--dark-color);
+    color: black;
     cursor: pointer;
     transition: all .2s ease-in-out;
     padding: .8rem 2rem;
@@ -472,7 +477,7 @@ input[type="checkbox"] {
 .main__high-light {
     margin: 2rem 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(3, 1fr));
+    grid-template-columns: 1fr;
     gap: 1rem
 }
 
@@ -480,7 +485,7 @@ input[type="checkbox"] {
     margin: 30px auto 0;
     width: 85%;
     border-radius: 8px;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-box);
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -496,11 +501,11 @@ input[type="checkbox"] {
 }
 
 .main__booking-room-card {
-    width: 100%;
+    width: 90%;
     margin: 3rem auto;
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-box);
     background-color: var(--light-color);
     display: grid;
     grid-template-rows: repeat(2, 1fr);
@@ -520,14 +525,147 @@ input[type="checkbox"] {
         "btnOne btnTwo";
 }
 
+.main__gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, auto);
+    width: 100%;
+}
+
+.main__gallery-image {
+    height: 100%;
+    width: 100%;
+}
+
+.main__gallery-image--lake,
+.main__gallery-image--mounten,
+.main__gallery-image--forrest {
+    grid-column: 1 / span 5;
+    grid-row: 1;
+}
+
+.main__gallery-input {
+    display: none;
+}
+
+#lakeOne:checked~.main__gallery-image--lake {
+    content: url("../assets/image/01-day.jpg");
+}
+
+#lakeTwo:checked~.main__gallery-image--lake {
+    content: url("../assets/image/02-day.jpg");
+}
+
+#lakeThree:checked~.main__gallery-image--lake {
+    content: url("../assets/image/03-day.jpg");
+}
+
+#lakeFour:checked~.main__gallery-image--lake {
+    content: url("../assets/image/04-day.jpg");
+}
+
+#lakeFive:checked~.main__gallery-image--lake {
+    content: url("../assets/image/05-day.jpg");
+}
+
+#lakeSix:checked~.main__gallery-image--lake {
+    content: url("../assets/image/06-day.jpg");
+}
+
+#lakeSeven:checked~.main__gallery-image--lake {
+    content: url("../assets/image/07-day.jpg");
+}
+
+#lakeEight:checked~.main__gallery-image--lake {
+    content: url("../assets/image/08-day.jpg");
+}
+
+#lakeNine:checked~.main__gallery-image--lake {
+    content: url("../assets/image/09-day.jpg");
+}
+
+#mountenOne:checked~.main__gallery-image--mounten {
+    content: url("../assets/image/01-day.jpg");
+}
+
+#mountenTwo:checked~.main__gallery-image--mounten {
+    content: url("../assets/image/02-day.jpg");
+}
+
+#mountenThree:checked~.main__gallery-image--mounten {
+    content: url("../assets/image/03-day.jpg");
+}
+
+#mountenFour:checked~.main__gallery-image--mounten {
+    content: url("../assets/image/04-day.jpg");
+}
+
+#mountenFive:checked~.main__gallery-image--mounten {
+    content: url("../assets/image/05-day.jpg");
+}
+
+#mountenSix:checked~.main__gallery-image--mounten {
+    content: url("../assets/image/06-day.jpg");
+}
+
+#mountenSeven:checked~.main__gallery-image--mounten {
+    content: url("../assets/image/07-day.jpg");
+}
+
+#mountenEight:checked~.main__gallery-image--mounten {
+    content: url("../assets/image/08-day.jpg");
+}
+
+#mountenNine:checked~.main__gallery-image--mounten {
+    content: url("../assets/image/09-day.jpg");
+}
+
+#forrestOne:checked~.main__gallery-image--forrest {
+    content: url("../assets/image/01-day.jpg");
+}
+
+#forrestTwo:checked~.main__gallery-image--forrest {
+    content: url("../assets/image/02-day.jpg");
+}
+
+#forrestThree:checked~.main__gallery-image--forrest {
+    content: url("../assets/image/03-day.jpg");
+}
+
+#forrestFour:checked~.main__gallery-image--forrest {
+    content: url("../assets/image/04-day.jpg");
+}
+
+#forrestFive:checked~.main__gallery-image--forrest {
+    content: url("../assets/image/05-day.jpg");
+}
+
+#forrestSix:checked~.main__gallery-image--forrest {
+    content: url("../assets/image/06-day.jpg");
+}
+
+#forrestSeven:checked~.main__gallery-image--forrest {
+    content: url("../assets/image/07-day.jpg");
+}
+
+#forrestEight:checked~.main__gallery-image--forrest {
+    content: url("../assets/image/08-day.jpg");
+}
+
+#forrestNine:checked~.main__gallery-image--forrest {
+    content: url("../assets/image/09-day.jpg");
+}
+
+
+
 /* Booking Section Styling */
 
 .booking-form {
-    margin: 6rem auto 0;
+    margin: 6rem auto 3rem;
     width: 100%;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-box);
     background-color: var(--light-color);
 }
 
@@ -541,6 +679,27 @@ input[type="checkbox"] {
     padding: 1rem 0;
     color: var(--dark-color);
     font-family: 'Cinzel', serif;
+}
+
+.booking-form__cabin-container {
+    width: 95%;
+    padding: 1rem; 
+    margin:1rem auto; 
+    border-top: 1px solid ;
+    border-bottom: 1px solid ;     
+}
+
+.booking-form__cabin-container:nth-of-type(2) {
+    display: none;
+}
+.booking-form__cabin-container:nth-of-type(3) {
+    display: none;
+}
+.booking-form__cabin-container:nth-of-type(4) {
+    display: none;
+}
+.booking-form__cabin-container:nth-of-type(5) {
+    display: none;
 }
 
 .booking-form__grid-container {
@@ -568,8 +727,23 @@ input[type="checkbox"] {
     border-radius: 0 20px 0 20px;
     border: none;
     width: 60%;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-box);
     max-height: 40px;
+}
+
+.booking-form__available-btn {
+    display: inline-block;
+    margin: 1.5rem;
+    list-style: none;
+    padding: .8rem 2.5rem; 
+    border-radius: 6rem;
+    box-shadow: var(--shadow-box);
+    background-color: var(--primary-color);
+    cursor: pointer;
+    font-size: .9rem;
+    font-weight: 700;
+    font-family: 'Maven Pro', sans-serif;
+
 }
 
 /* footer section styling */
@@ -580,7 +754,7 @@ input[type="checkbox"] {
 
 .footer__content-container {
     padding: 1rem 0;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-box);
     display: grid;
     grid-template-columns: 1fr;
 }
@@ -631,6 +805,7 @@ input[type="checkbox"] {
 }
 
 
+
 @media screen and (min-width: 700px) {
 
     /* header */
@@ -665,7 +840,7 @@ input[type="checkbox"] {
 
     .main__high-light {
         margin: 3rem 0;
-        grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .main__high-light-card {
@@ -673,8 +848,13 @@ input[type="checkbox"] {
         width: 100%;
     }
 
+    .main__high-light-card--large {
+        grid-column:auto / span 2;
+        margin: 1rem 0;
+    }
+
     .main__section-title {
-        grid-column: auto / span 3;
+        grid-column: auto / span 2;
     }
 
     .main__booking-room-card {
@@ -699,6 +879,8 @@ input[type="checkbox"] {
             ". imgFour imgFour"
             "imgL imgL imgL";
     }
+
+
 
     .main__text-container {
         margin-bottom: 0;
@@ -727,7 +909,7 @@ input[type="checkbox"] {
     /* Booking */
 
     .booking-form {
-        margin: 8rem auto 0;
+        margin: 8rem auto 4rem;
         grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
     }
 
@@ -735,7 +917,6 @@ input[type="checkbox"] {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-
 
     /* footer */
 
