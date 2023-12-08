@@ -21,8 +21,7 @@ html {
     --dark-color: #081713;
     --medium-color: #e2e4e3;
     --light-color: #FBFDFC;
-
-    --shadow-box: 0 0 .5rem rgba(0, 0, 0, 0.1);
+    --shadow-box: 0 0 1rem rgba(0, 0, 0, .3);
     --shadow-btn: 2px 2px 8px rgba(0, 0, 0, .2);
 }
 
@@ -277,7 +276,6 @@ input[type="checkbox"] {
     justify-content: space-evenly;
     background-color: var(--light-color);    
     box-shadow: var(--shadow-box);
-    
 }
 
 .main__color-section {
@@ -435,7 +433,8 @@ input[type="checkbox"] {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    border-radius: 4px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-box);
 }
 
 .main__high-light {
@@ -462,6 +461,7 @@ input[type="checkbox"] {
     width: 100%;
     transform: translateY(-30px);
     border-radius: 8px;
+    box-shadow: var(--shadow-box);
 }
 
 .main__booking-room-card {
@@ -497,6 +497,7 @@ input[type="checkbox"] {
 .main__gallery-image {
     height: 100%;
     width: 100%;
+    box-shadow: var(--shadow-box);
 }
 
 .main__gallery-image--lake,
@@ -946,7 +947,7 @@ input[type="checkbox"] {
             ". imgTwo imgTwo"
             "imgThree imgThree ."
             ". imgFour imgFour"
-            "imgL imgL imgL";
+            ". . .";
     }
 
     .main__grid-container--two {
@@ -967,25 +968,34 @@ input[type="checkbox"] {
         margin-bottom: 0;
     }
 
+    .main__text-container:nth-of-type(odd) {
+        border-radius:0 8px 8px 0 ;
+    }
+    
+    .main__text-container:nth-of-type(even) {
+        border-radius:8px 0 0 8px;
+    }
+
     .main__card-image:nth-of-type(1) {
         grid-area: imgOne;
+        border-radius: 8px 0 0 8px;
     }
 
     .main__card-image:nth-of-type(2) {
         grid-area: imgTwo;
+        border-radius: 0 8px 8px 0;
     }
 
     .main__card-image:nth-of-type(3) {
         grid-area: imgThree;
+        border-radius: 8px 0 0 8px;
     }
 
     .main__card-image:nth-of-type(4) {
         grid-area: imgFour;
+        border-radius: 0 8px 8px 0;
     }
 
-    .main__card-image:nth-of-type(5) {
-        grid-area: imgL;
-    }
 
     /* Booking */
 
